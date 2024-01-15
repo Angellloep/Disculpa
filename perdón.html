@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta de Perdón</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        #noButton {
+            transition: transform 2s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <h1>¿Me perdonas?</h1>
+    <button onclick="respuesta('si')">Sí</button>
+    <button id="noButton" onclick="respuesta('no')">No</button>
+
+    <p id="respuesta"></p>
+
+    <script>
+        function respuesta(opcion) {
+            if (opcion === 'si') {
+                document.getElementById('respuesta').innerHTML = 'Te amo mucho 😘';
+            } else {
+                document.getElementById('noButton').style.transform = 'translateX(' + window.innerWidth + 'px)';
+                alert('No te moverás de ahí hasta que digas sí.');
+            }
+        }
+    </script>
+</body>
+</html>
